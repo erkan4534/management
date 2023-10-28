@@ -15,6 +15,7 @@
         <module>m-02</module>
         <module>m-03</module>
         <module>m-04</module>
+        <module>m-dockerfile</module>
     </modules>
 
 </project>
