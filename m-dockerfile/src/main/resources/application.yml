@@ -3,7 +3,7 @@ server:
 spring:
   datasource:
     password: root
-    url: jdbc:postgresql://172.19.0.3:5432/schoolDb
+    url: jdbc:postgresql://0.0.0.0:5432/schoolDb
     username: root
   jpa:
     hibernate:
