@@ -12,6 +12,7 @@
     <artifactId>m-dockerfile</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <description>m-dockerfile</description>
+    <name>m-dockerfile</name>
     <properties>
         <java.version>17</java.version>
     </properties>
