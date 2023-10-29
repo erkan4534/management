@@ -1,3 +1,4 @@
+```java
 server:
   port: 8085
 spring:
@@ -17,5 +18,5 @@ spring:
 docker build -t school-management .
 
 docker container run --name school-management-3 -p 8085:8085 --network m-dockerfile_postgres school-management
- 
+``` 
 
