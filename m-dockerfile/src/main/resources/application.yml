@@ -4,7 +4,7 @@ spring:
   datasource:
     username: root
     password: root
-    url: jdbc:postgresql://127.0.0.1:5432/schoolDb
+    url: jdbc:postgresql://172.22.0.3:5432/schoolDb
   jpa:
     hibernate:
       ddl-auto: update
