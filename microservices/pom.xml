@@ -13,6 +13,7 @@
 
     <modules>
         <module>school-management</module>
+        <module>eureka-server</module>
     </modules>
 
 </project>
