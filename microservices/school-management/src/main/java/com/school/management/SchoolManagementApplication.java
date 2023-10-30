@@ -1,13 +1,13 @@
-package com.management.microservices;
+package com.school.management;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MicroservicesApplication {
+public class SchoolManagementApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MicroservicesApplication.class, args);
+        SpringApplication.run(SchoolManagementApplication.class, args);
     }
 
 }
