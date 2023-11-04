@@ -14,5 +14,6 @@
         <module>m-03</module>
         <module>m-04</module>
         <module>m-dockerfile</module>
+        <module>microservices</module>
     </modules>
 </project>
