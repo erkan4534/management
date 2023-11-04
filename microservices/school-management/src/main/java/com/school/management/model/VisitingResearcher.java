@@ -1,6 +1,6 @@
 package com.school.management.model;
 
-import jakarta.persistence.Entity;
+import javax.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

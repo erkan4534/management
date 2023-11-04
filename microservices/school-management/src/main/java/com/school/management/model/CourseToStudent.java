@@ -1,6 +1,6 @@
 package com.school.management.model;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.*;
 
 @Getter
