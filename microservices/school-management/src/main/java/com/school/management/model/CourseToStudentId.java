@@ -1,6 +1,6 @@
 package com.school.management.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import lombok.*;
 import java.io.Serializable;
 @Getter
