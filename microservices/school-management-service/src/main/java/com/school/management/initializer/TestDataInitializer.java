@@ -1,7 +1,7 @@
 package com.school.management.initializer;
 
-import com.school.management.model.*;
-import com.school.management.model.enums.Gender;
+import com.management.common.model.*;
+import com.management.common.model.enums.Gender;
 import com.school.management.repository.CourseRepository;
 import com.school.management.repository.InstructorRepository;
 import com.school.management.repository.StudentRepository;
@@ -10,7 +10,6 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.time.LocalDate;
 import java.time.Month;
 
@@ -39,7 +38,7 @@ public class TestDataInitializer implements ApplicationRunner {
         Course course3 = new Course("İngilizce","ing","70",instructor2);
 
         Student student1 = new Student("Ali", LocalDate.of(2000, Month.APRIL,22),"Kadıköy", Gender.MALE.getGender());
-        Student student2 = new Student("Kemal", LocalDate.of(2001, Month.JANUARY,22),"Bostancı",Gender.MALE.getGender());
+        Student student2 = new Student("Kemal", LocalDate.of(2001, Month.JANUARY,22),"Bostancı", Gender.MALE.getGender());
         Student student3 = new Student("Ekin", LocalDate.of(2000, Month.DECEMBER,22),"Suadiye",Gender.FEMALE.getGender());
 
         student1.getCourses().add(course1);

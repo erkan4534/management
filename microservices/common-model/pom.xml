@@ -8,8 +8,10 @@
         <artifactId>management</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <packaging>pom</packaging>
-    <artifactId>microservices</artifactId>
+
+    <groupId>com.management.common</groupId>
+    <artifactId>common-model</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -17,13 +19,17 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <modules>
-        <module>eureka-server</module>
-        <module>validation-service</module>
-        <module>school-management-service</module>
-        <module>notification-service</module>
-        <module>payment-service</module>
-        <module>common-model</module>
-    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>3.1.5</version>
+        </dependency>
+    </dependencies>
 
 </project>

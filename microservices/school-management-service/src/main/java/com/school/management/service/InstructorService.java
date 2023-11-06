@@ -1,7 +1,7 @@
 package com.school.management.service;
 
-import com.school.management.model.dto.InstructorDto;
-import com.school.management.model.dto.InstructorToCourseDto;
+import com.management.common.model.dto.InstructorDto;
+import com.management.common.model.dto.InstructorToCourseDto;
 
 import java.util.List;
 

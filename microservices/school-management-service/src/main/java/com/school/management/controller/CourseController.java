@@ -1,10 +1,9 @@
 package com.school.management.controller;
 
-import com.school.management.model.dto.CourseDto;
+import com.management.common.model.dto.CourseDto;
 import com.school.management.service.CourseService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController

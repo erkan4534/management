@@ -1,4 +1,4 @@
-package com.school.management.model.enums;
+package com.management.common.model.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

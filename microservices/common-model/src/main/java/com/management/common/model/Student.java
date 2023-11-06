@@ -1,13 +1,12 @@
-package com.school.management.model;
+package com.management.common.model;
 
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import jakarta.persistence.*;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
-
 @Getter
 @Setter
 @NoArgsConstructor

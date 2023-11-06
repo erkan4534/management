@@ -1,4 +1,4 @@
-package com.school.management.model.dto;
+package com.management.common.model.dto;
 
 import lombok.Getter;
 import lombok.Setter;

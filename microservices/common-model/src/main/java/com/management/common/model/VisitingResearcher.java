@@ -1,6 +1,6 @@
-package com.school.management.model;
+package com.management.common.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Entity
-public class VisitingResearcher extends Instructor{
+public class VisitingResearcher extends Instructor {
     private Double hourlyWage;
     public VisitingResearcher(String name, String phoneNumber,Double hourlyWage) {
         super(name,phoneNumber);

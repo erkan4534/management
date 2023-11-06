@@ -1,9 +1,9 @@
 package com.school.management.service.impl;
 
+import com.management.common.model.Instructor;
+import com.management.common.model.dto.InstructorDto;
+import com.management.common.model.dto.InstructorToCourseDto;
 import com.school.management.exception.RecordNotFoundException;
-import com.school.management.model.Instructor;
-import com.school.management.model.dto.InstructorDto;
-import com.school.management.model.dto.InstructorToCourseDto;
 import com.school.management.repository.CourseRepository;
 import com.school.management.repository.InstructorRepository;
 import com.school.management.service.InstructorService;
@@ -12,7 +12,6 @@ import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.List;
 
 @RequiredArgsConstructor

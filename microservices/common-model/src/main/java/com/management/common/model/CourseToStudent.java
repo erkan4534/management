@@ -1,6 +1,8 @@
-package com.school.management.model;
+package com.management.common.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.EmbeddedId;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 import lombok.*;
 
 @Getter
