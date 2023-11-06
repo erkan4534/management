@@ -20,7 +20,7 @@
     <modules>
         <module>eureka-server</module>
         <module>validation-service</module>
-        <module>school-management</module>
+        <module>school-management-service</module>
         <module>notification-service</module>
         <module>payment-service</module>
     </modules>
