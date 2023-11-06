@@ -1,4 +1,4 @@
-package com.management;
+package com.management.notificationservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

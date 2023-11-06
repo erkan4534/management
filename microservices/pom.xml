@@ -19,7 +19,7 @@
 
     <modules>
         <module>eureka-server</module>
-        <module>validation-services</module>
+        <module>validation-service</module>
         <module>school-management</module>
         <module>notification-service</module>
     </modules>
