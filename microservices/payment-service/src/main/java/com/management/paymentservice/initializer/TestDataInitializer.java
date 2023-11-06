@@ -16,7 +16,7 @@ public class TestDataInitializer implements ApplicationRunner {
     private final PaymentRepository paymentRepository;
     private final InstructorRepository instructorRepository;
     @Override
-    public void run(ApplicationArguments args) throws Exception {
+    public void run(ApplicationArguments args)  {
         Instructor instructor =instructorRepository.findById(1L).get();
         Payment payment = new Payment("2323",instructor);
         paymentRepository.save(payment);
