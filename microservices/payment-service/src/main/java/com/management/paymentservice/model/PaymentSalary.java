@@ -10,16 +10,19 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Entity
-public class Payment {
+@Table(name = "PAYMENT_SALARY")
+public class PaymentSalary {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String iban;
     @ManyToOne
     private Instructor instructor;
+    private Double salary;
 
-    public Payment(String iban, Instructor instructor) {
+    public PaymentSalary(String iban, Instructor instructor,Double salary) {
         this.iban = iban;
         this.instructor = instructor;
+        this.salary = salary;
     }
 }

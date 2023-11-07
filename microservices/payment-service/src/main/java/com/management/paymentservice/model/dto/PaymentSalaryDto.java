@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class PaymentDto {
+public class PaymentSalaryDto {
     private Long id;
     private String iban;
     private Long instructorId;
