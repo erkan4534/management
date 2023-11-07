@@ -3,9 +3,7 @@ package com.management.paymentservice.controller;
 import com.management.paymentservice.model.dto.PaymentSalaryDto;
 import com.management.paymentservice.service.PaymentSalaryService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
@@ -22,7 +20,10 @@ public class PaymentController {
         return paymentSalaryService.updatePaymentSalary(paymentSalaryDto);
     }
 
-
+    @DeleteMapping("/payment-salary/instructorId")
+    public String deletePaymentSalary(@RequestParam Long instructorId){
+        return paymentSalaryService.deletePaymentSalary(instructorId);
+    }
 
 
 
