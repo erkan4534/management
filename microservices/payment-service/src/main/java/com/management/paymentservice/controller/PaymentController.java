@@ -15,7 +15,7 @@ public class PaymentController {
        return paymentSalaryService.savePaymentSalary(paymentSalaryDto);
     }
 
-    @PostMapping("/payment-salary")
+    @PutMapping("/payment-salary")
     public String updatePaymentSalary(@RequestBody PaymentSalaryDto paymentSalaryDto){
         return paymentSalaryService.updatePaymentSalary(paymentSalaryDto);
     }

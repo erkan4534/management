@@ -1,7 +1,6 @@
 package com.management.paymentservice.model;
 
 import com.management.common.model.Instructor;
-import com.management.paymentservice.service.impl.PaymentSalaryHistoryServiceImpl;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,11 +13,9 @@ import java.time.LocalDate;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "PAYMENT_SALARY")
-@EntityListeners(PaymentSalaryHistoryServiceImpl.class)
-public class PaymentSalary {
+@Table(name = "PAYMENT_SALARY_HISTORY")
+public class PaymentSalaryHistory {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String iban;
     @ManyToOne
@@ -28,10 +25,4 @@ public class PaymentSalary {
     private LocalDate createDate;
     @LastModifiedDate
     private LocalDate updateDate;
-
-    public PaymentSalary(String iban, Instructor instructor,Double salary) {
-        this.iban = iban;
-        this.instructor = instructor;
-        this.salary = salary;
-    }
 }

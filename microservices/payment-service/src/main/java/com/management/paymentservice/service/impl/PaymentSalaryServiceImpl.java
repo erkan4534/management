@@ -10,14 +10,14 @@ import com.management.paymentservice.service.PaymentSalaryService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
-import java.time.LocalDate;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
 public class PaymentSalaryServiceImpl implements PaymentSalaryService {
     private final ModelMapper modelMapper;
-    private PaymentSalaryRepository paymentSalaryRepository;
-    private InstructorRepository instructorRepository;
+    private final PaymentSalaryRepository paymentSalaryRepository;
+    private final InstructorRepository instructorRepository;
     @Override
     public String savePaymentSalary(PaymentSalaryDto paymentSalaryDto) {
         PaymentSalary paymentSalary = this.modelMapper.map(paymentSalaryDto, PaymentSalary.class);
@@ -41,14 +41,11 @@ public class PaymentSalaryServiceImpl implements PaymentSalaryService {
     }
 
     @Override
+    @Transactional
     public String deletePaymentSalary(Long instructorId) {
         instructorRepository.findById(instructorId).orElseThrow(()->
                 new RecordNotFoundException("Instructor not found with ID :"+ instructorId));
         paymentSalaryRepository.deleteByInstructor_Id(instructorId);
-
-
-
-
         return "success";
     }
 }

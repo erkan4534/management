@@ -17,6 +17,11 @@ public class TestDataInitializer implements ApplicationRunner {
     private final InstructorRepository instructorRepository;
     @Override
     public void run(ApplicationArguments args)  {
+
+        if(paymentSalaryRepository.findAll().size()>0){
+           return;
+        }
+
         Instructor instructor =instructorRepository.findById(1L).get();
         PaymentSalary paymentSalary = new PaymentSalary("2323",instructor,80000D);
         paymentSalaryRepository.save(paymentSalary);
