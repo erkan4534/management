@@ -9,4 +9,5 @@ public class PaymentSalaryDto {
     private Long id;
     private String iban;
     private Long instructorId;
+    private Double salary;
 }
