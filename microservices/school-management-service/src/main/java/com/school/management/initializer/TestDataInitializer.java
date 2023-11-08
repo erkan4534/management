@@ -26,9 +26,9 @@ public class TestDataInitializer implements ApplicationRunner {
     public void run(ApplicationArguments args)  {
         System.out.println("Start....");
 
-        if(studentRepository.findAll().size()!=0){
-            return;
-        }
+       // if(studentRepository.findAll().size()!=0){
+         //   return;
+        //}
 
         Instructor instructor1 = new PermanentInstructor("İrfan","12344",10000D);
         Instructor instructor2 = new VisitingResearcher("Serdar","445566",100D);
