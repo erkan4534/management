@@ -11,6 +11,7 @@ import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import java.time.LocalDate;
 
 @Service
 @RequiredArgsConstructor
@@ -24,7 +25,7 @@ public class PaymentSalaryServiceImpl implements PaymentSalaryService {
         Instructor instructor =instructorRepository.findById(paymentSalaryDto.getInstructorId()).orElseThrow(()->
                 new RecordNotFoundException("Instructor not found with ID :"+ paymentSalaryDto.getInstructorId()));
         paymentSalary.setInstructor(instructor);
-        //paymentSalary.setCreateDate(LocalDate.of(LocalDate.now().getYear(),LocalDate.now().getMonth(),LocalDate.now().getDayOfMonth()));
+        paymentSalary.setCreateDate(LocalDate.of(LocalDate.now().getYear(),LocalDate.now().getMonth(),LocalDate.now().getDayOfMonth()));
         paymentSalaryRepository.save(paymentSalary);
         return "success";
     }
@@ -35,7 +36,7 @@ public class PaymentSalaryServiceImpl implements PaymentSalaryService {
         Instructor instructor =instructorRepository.findById(paymentSalaryDto.getInstructorId()).orElseThrow(()->
                 new RecordNotFoundException("Instructor not found with ID :"+ paymentSalaryDto.getInstructorId()));
         paymentSalary.setInstructor(instructor);
-        //paymentSalary.setUpdateDate(LocalDate.of(LocalDate.now().getYear(),LocalDate.now().getMonth(),LocalDate.now().getDayOfMonth()));
+        paymentSalary.setUpdateDate(LocalDate.of(LocalDate.now().getYear(),LocalDate.now().getMonth(),LocalDate.now().getDayOfMonth()));
         paymentSalaryRepository.save(paymentSalary);
         return "success";
     }
