@@ -24,9 +24,7 @@ public class PaymentSalary {
     @ManyToOne
     private Instructor instructor;
     private Double salary;
-    @CreatedDate
     private LocalDate createDate;
-    @LastModifiedDate
     private LocalDate updateDate;
 
     public PaymentSalary(String iban, Instructor instructor,Double salary) {

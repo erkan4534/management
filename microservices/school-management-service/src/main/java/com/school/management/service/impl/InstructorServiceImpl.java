@@ -12,6 +12,8 @@ import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.client.RestTemplate;
+
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -21,6 +23,7 @@ public class InstructorServiceImpl implements InstructorService {
     private final InstructorRepository instructorRepository;
     private final CourseRepository courseRepository;
     private final ModelMapper modelMapper;
+    private final RestTemplate restTemplate;
 
     @Override
     public InstructorToCourseDto findInstructor(Long instructorId) {
@@ -54,6 +57,8 @@ public class InstructorServiceImpl implements InstructorService {
     public String deleteInstructor(Long instructorId) {
         courseRepository.updateCourseSetNullInstructorId(instructorId);
         instructorRepository.deleteById(instructorId);
+
+       // restTemplate.delete("http://localhost:8081/payment-salary?instructorId={instructorId}",instructorId);
         return "success";
     }
 }

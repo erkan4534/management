@@ -21,8 +21,6 @@ public class PaymentSalaryHistory {
     @ManyToOne
     private Instructor instructor;
     private Double salary;
-    @CreatedDate
     private LocalDate createDate;
-    @LastModifiedDate
     private LocalDate updateDate;
 }
