@@ -2,7 +2,6 @@ package com.management.paymentservice.service.impl;
 
 import com.management.paymentservice.model.PaymentSalary;
 import com.management.paymentservice.model.PaymentSalaryHistory;
-import com.management.paymentservice.model.dto.PaymentSalaryHistoryDto;
 import com.management.paymentservice.repository.PaymentSalaryHistoryRepository;
 import com.management.paymentservice.service.PaymentSalaryHistoryService;
 import jakarta.persistence.PreRemove;

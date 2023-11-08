@@ -9,6 +9,8 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDate;
+
 @Component
 @RequiredArgsConstructor
 public class TestDataInitializer implements ApplicationRunner {
@@ -24,6 +26,7 @@ public class TestDataInitializer implements ApplicationRunner {
 
         Instructor instructor =instructorRepository.findById(1L).get();
         PaymentSalary paymentSalary = new PaymentSalary("2323",instructor,80000D);
+        paymentSalary.setCreateDate(LocalDate.of(LocalDate.now().getYear(),LocalDate.now().getMonth(),LocalDate.now().getDayOfMonth()));
         paymentSalaryRepository.save(paymentSalary);
     }
 }
