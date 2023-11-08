@@ -19,13 +19,19 @@ import java.time.LocalDate;
 public class PaymentSalary {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Long id;
+    @Column(name = "IBAN")
     private String iban;
     @ManyToOne
+    @JoinColumn(name="INSTRUCTOR_ID")
     private Instructor instructor;
+    @Column(name = "SALARY")
     private Double salary;
-    private LocalDate createDate;
+    @Column(name = "UPDATE_DATE")
     private LocalDate updateDate;
+    @Column(name = "CREATE_DATE")
+    private LocalDate createDate;
 
     public PaymentSalary(String iban, Instructor instructor,Double salary) {
         this.iban = iban;

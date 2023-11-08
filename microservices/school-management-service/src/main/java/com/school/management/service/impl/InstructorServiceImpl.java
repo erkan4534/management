@@ -56,9 +56,8 @@ public class InstructorServiceImpl implements InstructorService {
     @Transactional
     public String deleteInstructor(Long instructorId) {
         courseRepository.updateCourseSetNullInstructorId(instructorId);
+        restTemplate.delete("http://localhost:8081/payment-salary?instructorId={instructorId}",instructorId);
         instructorRepository.deleteById(instructorId);
-
-       // restTemplate.delete("http://localhost:8081/payment-salary?instructorId={instructorId}",instructorId);
         return "success";
     }
 }

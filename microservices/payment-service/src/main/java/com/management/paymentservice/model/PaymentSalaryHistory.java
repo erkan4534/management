@@ -1,12 +1,9 @@
 package com.management.paymentservice.model;
 
-import com.management.common.model.Instructor;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
 import java.time.LocalDate;
 
 @Getter
@@ -16,11 +13,16 @@ import java.time.LocalDate;
 @Table(name = "PAYMENT_SALARY_HISTORY")
 public class PaymentSalaryHistory {
     @Id
+    @Column(name = "ID")
     private Long id;
+    @Column(name = "IBAN")
     private String iban;
-    @ManyToOne
-    private Instructor instructor;
+    @Column(name="INSTRUCTOR_ID")
+    private Long instructorId;
+    @Column(name = "SALARY")
     private Double salary;
-    private LocalDate createDate;
+    @Column(name = "UPDATE_DATE")
     private LocalDate updateDate;
+    @Column(name = "CREATE_DATE")
+    private LocalDate createDate;
 }

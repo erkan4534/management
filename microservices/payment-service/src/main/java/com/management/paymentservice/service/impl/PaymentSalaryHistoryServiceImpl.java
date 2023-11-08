@@ -1,6 +1,8 @@
 package com.management.paymentservice.service.impl;
 
+import com.management.paymentservice.model.PaymentSalary;
 import com.management.paymentservice.model.PaymentSalaryHistory;
+import com.management.paymentservice.model.dto.PaymentSalaryHistoryDto;
 import com.management.paymentservice.repository.PaymentSalaryHistoryRepository;
 import com.management.paymentservice.service.PaymentSalaryHistoryService;
 import jakarta.persistence.PreRemove;
@@ -23,6 +25,7 @@ public class PaymentSalaryHistoryServiceImpl implements PaymentSalaryHistoryServ
         ModelMapper modelMapper = (ModelMapper) applicationContext.getBean("modelMapper");
         PaymentSalaryHistoryRepository repository = (PaymentSalaryHistoryRepository) applicationContext.getBean("paymentSalaryHistoryRepository");
         PaymentSalaryHistory paymentSalaryHistory = modelMapper.map(object, PaymentSalaryHistory.class);
+        paymentSalaryHistory.setInstructorId(((PaymentSalary) object).getInstructor().getId());
         repository.save(paymentSalaryHistory);
     }
 }
