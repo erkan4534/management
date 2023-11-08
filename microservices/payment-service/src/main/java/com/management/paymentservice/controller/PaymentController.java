@@ -20,7 +20,7 @@ public class PaymentController {
         return paymentSalaryService.updatePaymentSalary(paymentSalaryDto);
     }
 
-    @DeleteMapping("/payment-salary/instructorId")
+    @DeleteMapping("/payment-salary")
     public String deletePaymentSalary(@RequestParam Long instructorId){
         return paymentSalaryService.deletePaymentSalary(instructorId);
     }
