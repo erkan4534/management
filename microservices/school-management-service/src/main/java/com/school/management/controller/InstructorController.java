@@ -16,7 +16,7 @@ public class InstructorController {
         return instructorService.findInstructor(id);
     }
 
-    @GetMapping("/getInstructor")
+    @GetMapping("/getInstructors")
     public InstructorDto findInstructorById(@RequestParam("instructorId") Long instructorId){
         return instructorService.findByInstructorId(instructorId);
     }

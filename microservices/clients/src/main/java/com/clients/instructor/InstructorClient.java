@@ -10,7 +10,7 @@ import java.util.List;
 public interface InstructorClient {
     @GetMapping("/instructors/{id}")
     InstructorToCourseDto findStudentById(@PathVariable("id") Long id);
-    @GetMapping("/getInstructor")
+    @GetMapping("/getInstructors")
     InstructorDto findInstructorById(@RequestParam("instructorId") Long instructorId);
     @GetMapping("/getAllInstructors")
     List<InstructorDto> findAllInstructors();
