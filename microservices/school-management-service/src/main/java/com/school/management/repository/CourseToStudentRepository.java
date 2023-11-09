@@ -1,7 +1,6 @@
 package com.school.management.repository;
 
-import com.management.common.model.CourseToStudent;
-import com.management.common.model.CourseToStudentId;
+import com.school.management.model.*;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,6 +1,6 @@
 package com.school.management.repository;
 
-import com.management.common.model.Course;
+import com.school.management.model.*;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

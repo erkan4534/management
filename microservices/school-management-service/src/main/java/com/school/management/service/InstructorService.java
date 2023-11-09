@@ -1,8 +1,6 @@
 package com.school.management.service;
 
-import com.management.common.model.dto.InstructorDto;
-import com.management.common.model.dto.InstructorToCourseDto;
-
+import com.school.management.model.dto.*;
 import java.util.List;
 
 public interface InstructorService {

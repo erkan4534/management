@@ -23,7 +23,6 @@
         <module>school-management-service</module>
         <module>notification-service</module>
         <module>payment-service</module>
-        <module>common-model</module>
     </modules>
 
 </project>
