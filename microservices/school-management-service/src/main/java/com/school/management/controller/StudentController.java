@@ -11,22 +11,22 @@ import java.util.List;
 public class StudentController {
 
     private final StudentService studentService;
-    @GetMapping("/students/{id}")
-    public StudentDto findStudentById(@PathVariable("id") Long id){
-        return studentService.getStudent(id);
+    @GetMapping("/getStudent/{studentId}")
+    public StudentDto getStudent(@PathVariable("studentId") Long studentId){
+        return studentService.getStudent(studentId);
     }
 
-    @GetMapping("/students")
-    public List<StudentDto> findAllStudents(){
+    @GetMapping("/getAllStudents")
+    public List<StudentDto> getAllStudents(){
         return studentService.getAllStudents();
     }
 
-    @PostMapping("/students")
+    @PostMapping("/saveStudent")
     public String saveStudent(@RequestBody StudentDto studentDto){
         return studentService.saveStudent(studentDto);
     }
 
-    @PutMapping("/students")
+    @PutMapping("/updateStudent")
     public String updateStudent(@RequestBody StudentDto studentDto){
         return studentService.updateStudent(studentDto);
     }
@@ -36,8 +36,8 @@ public class StudentController {
         return studentService.studentToCourse(studentToCourseDto);
     }
 
-    @DeleteMapping("/students")
-    public String deleteStudent(@RequestParam("id") Long id){
-        return studentService.deleteStudent(id);
+    @DeleteMapping("/deleteStudent")
+    public String deleteStudent(@RequestParam("studentId") Long studentId){
+        return studentService.deleteStudent(studentId);
     }
 }

@@ -11,14 +11,14 @@ import java.util.List;
 public class InstructorController {
 
     private final InstructorService instructorService;
-    @GetMapping("/getInstructorDetailInfo/{id}")
-    public InstructorDetailInfoDto getInstructorDetailInfo(@PathVariable Long id){
-        return instructorService.getInstructorDetailInfo(id);
+    @GetMapping("/getInstructorDetailInfo/{instructorId}")
+    public InstructorDetailInfoDto getInstructorDetailInfo(@PathVariable("instructorId") Long instructorId){
+        return instructorService.getInstructorDetailInfo(instructorId);
     }
 
     @GetMapping("/getInstructor")
-    public InstructorDto getInstructor(@RequestParam("id") Long id){
-        return instructorService.getInstructor(id);
+    public InstructorDto getInstructor(@RequestParam("instructorId") Long instructorId){
+        return instructorService.getInstructor(instructorId);
     }
 
     @GetMapping("/getAllInstructors")
@@ -36,8 +36,8 @@ public class InstructorController {
         return instructorService.updateInstructor(instructorDto);
     }
 
-    @DeleteMapping("/deleteInstructorId")
-    public String deleteInstructorId(@RequestParam("id") Long id){
-        return instructorService.deleteInstructor(id);
+    @DeleteMapping("/deleteInstructor")
+    public String deleteInstructor(@RequestParam("instructorId") Long instructorId){
+        return instructorService.deleteInstructor(instructorId);
     }
 }

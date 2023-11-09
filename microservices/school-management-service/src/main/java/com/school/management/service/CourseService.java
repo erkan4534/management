@@ -1,14 +1,12 @@
 package com.school.management.service;
 
 import com.school.management.model.dto.*;
-import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 public interface CourseService {
-    CourseDto getCourse(@RequestParam Long id);
+    CourseDto getCourse(Long courseId);
     List<CourseDto> getAllCourses();
-    String saveCourse(@RequestBody CourseDto course);
-    String updateCourse(@RequestBody CourseDto course);
-    @DeleteMapping("/deleteCourse")
-    String deleteCourse(@RequestParam Long id);
+    String saveCourse(CourseDto course);
+    String updateCourse(CourseDto course);
+    String deleteCourse(Long courseId);
 }

@@ -12,8 +12,8 @@ public class CourseController {
 
     private final CourseService courseService;
     @GetMapping("/getCourse")
-    public CourseDto findCourseById(@RequestParam("id") Long id){
-        return courseService.getCourse(id);
+    public CourseDto findCourseById(@RequestParam("courseId") Long courseId){
+        return courseService.getCourse(courseId);
     }
 
     @GetMapping("/getAllCourses")

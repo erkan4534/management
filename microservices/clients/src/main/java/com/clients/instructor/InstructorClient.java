@@ -19,5 +19,5 @@ public interface InstructorClient {
     @PutMapping("/updateInstructor")
     String updateInstructor(@RequestBody InstructorDto instructorDto);
     @DeleteMapping("/deleteInstructor")
-    String deleteInstructorId(@RequestParam("instructorId") Long instructorId);
+    String deleteInstructor(@RequestParam("instructorId") Long instructorId);
 }
