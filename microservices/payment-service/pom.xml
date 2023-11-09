@@ -55,8 +55,14 @@
             <version>2.2.0</version>
         </dependency>
         <dependency>
-            <groupId>com.management.common</groupId>
-            <artifactId>common-model</artifactId>
+            <groupId>com.management.clients</groupId>
+            <artifactId>clients</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.management</groupId>
+            <artifactId>school-management-service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>

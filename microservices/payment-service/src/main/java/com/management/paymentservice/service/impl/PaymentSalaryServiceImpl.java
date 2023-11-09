@@ -1,12 +1,12 @@
 package com.management.paymentservice.service.impl;
 
-import com.management.common.model.Instructor;
 import com.management.paymentservice.exception.RecordNotFoundException;
 import com.management.paymentservice.model.PaymentSalary;
 import com.management.paymentservice.model.dto.PaymentSalaryDto;
 import com.management.paymentservice.repository.InstructorRepository;
 import com.management.paymentservice.repository.PaymentSalaryRepository;
 import com.management.paymentservice.service.PaymentSalaryService;
+import com.school.management.model.Instructor;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;

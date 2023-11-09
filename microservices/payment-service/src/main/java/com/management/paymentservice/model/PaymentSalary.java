@@ -1,7 +1,7 @@
 package com.management.paymentservice.model;
 
-import com.management.common.model.Instructor;
 import com.management.paymentservice.service.impl.PaymentSalaryHistoryServiceImpl;
+import com.school.management.model.Instructor;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
