@@ -4,21 +4,20 @@ import com.clients.instructor.dto.InstructorDto;
 import com.clients.instructor.dto.InstructorToCourseDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @FeignClient("SCHOOL-MANAGEMENT")
 public interface InstructorClient {
     @GetMapping("/instructors/{id}")
-    InstructorToCourseDto findStudentById(@PathVariable Long id);
+    InstructorToCourseDto findStudentById(@PathVariable("id") Long id);
     @GetMapping("/getInstructor")
-    public InstructorDto findInstructorById(@RequestParam Long instructorId);
+    InstructorDto findInstructorById(@RequestParam("instructorId") Long instructorId);
     @GetMapping("/getAllInstructors")
     List<InstructorDto> findAllInstructors();
     @PostMapping("/instructors")
     String saveInstructor(@RequestBody InstructorDto instructorDto);
     @PutMapping("/instructors")
     String updateInstructor(@RequestBody InstructorDto instructorDto);
-    @DeleteMapping("/instructors/id")
-    String deleteInstructorId(@RequestParam Long id);
+    @DeleteMapping("/instructors")
+    String deleteInstructorId(@RequestParam("id") Long id);
 }

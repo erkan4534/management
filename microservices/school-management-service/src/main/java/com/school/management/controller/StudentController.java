@@ -12,7 +12,7 @@ public class StudentController {
 
     private final StudentService studentService;
     @GetMapping("/students/{id}")
-    public StudentDto findStudentById(@PathVariable Long id){
+    public StudentDto findStudentById(@PathVariable("id") Long id){
         return studentService.findStudent(id);
     }
 
@@ -36,8 +36,8 @@ public class StudentController {
         return studentService.studentToCourse(studentToCourseDto);
     }
 
-    @DeleteMapping("/students/id")
-    public String deleteStudent(@RequestParam Long id){
+    @DeleteMapping("/students")
+    public String deleteStudent(@RequestParam("id") Long id){
         return studentService.deleteStudent(id);
     }
 }

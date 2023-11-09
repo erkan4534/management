@@ -17,7 +17,7 @@ public class InstructorController {
     }
 
     @GetMapping("/getInstructor")
-    public InstructorDto findInstructorById(@RequestParam Long instructorId){
+    public InstructorDto findInstructorById(@RequestParam("instructorId") Long instructorId){
         return instructorService.findByInstructorId(instructorId);
     }
 
@@ -36,8 +36,8 @@ public class InstructorController {
         return instructorService.updateInstructor(instructorDto);
     }
 
-    @DeleteMapping("/instructors/id")
-    public String deleteInstructorId(@RequestParam Long id){
+    @DeleteMapping("/instructors")
+    public String deleteInstructorId(@RequestParam("id") Long id){
         return instructorService.deleteInstructor(id);
     }
 }

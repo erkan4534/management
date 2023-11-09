@@ -11,12 +11,12 @@ import java.util.List;
 public class CourseController {
 
     private final CourseService courseService;
-    @GetMapping("/courses/id")
-    public CourseDto findCourseById(@RequestParam Long id){
+    @GetMapping("/getCourses")
+    public CourseDto findCourseById(@RequestParam("id") Long id){
         return courseService.findCourse(id);
     }
 
-    @GetMapping("/courses")
+    @GetMapping("/getAllCourses")
     public List<CourseDto> findAllCourses(){
         return courseService.findAllCourses();
     }
@@ -31,8 +31,8 @@ public class CourseController {
         return courseService.updateCourse(course);
     }
 
-    @DeleteMapping("/courses/id")
-    public String deleteCourse(@RequestParam Long id){
+    @DeleteMapping("/courses")
+    public String deleteCourse(@RequestParam("id") Long id){
         return courseService.deleteCourse(id);
     }
 }

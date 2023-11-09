@@ -8,9 +8,9 @@ import java.util.List;
 
 @FeignClient("SCHOOL-MANAGEMENT")
 public interface CourseClient {
-    @GetMapping("/courses/id")
+    @GetMapping("/getCourses")
     CourseDto findCourseById(@RequestParam Long id);
-    @GetMapping("/courses")
+    @GetMapping("/getAllCourses")
     List<CourseDto> findAllCourses();
     @PostMapping("/courses")
     String saveCourse(@RequestBody CourseDto course);

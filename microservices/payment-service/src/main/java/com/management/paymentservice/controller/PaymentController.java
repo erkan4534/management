@@ -21,7 +21,7 @@ public class PaymentController {
     }
 
     @DeleteMapping("/payment-salary")
-    public String deletePaymentSalary(@RequestParam Long instructorId){
+    public String deletePaymentSalary(@RequestParam("instructorId") Long instructorId){
         return paymentSalaryService.deletePaymentSalary(instructorId);
     }
 
