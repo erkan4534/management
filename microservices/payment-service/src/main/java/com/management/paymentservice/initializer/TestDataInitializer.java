@@ -1,14 +1,13 @@
 package com.management.paymentservice.initializer;
 
-import com.management.common.model.Instructor;
 import com.management.paymentservice.model.PaymentSalary;
 import com.management.paymentservice.repository.InstructorRepository;
 import com.management.paymentservice.repository.PaymentSalaryRepository;
+import com.school.management.model.Instructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
-
 import java.time.LocalDate;
 
 @Component
