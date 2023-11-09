@@ -1,6 +1,5 @@
 package com.management.paymentservice.model.dto;
 
-import com.school.management.model.Instructor;
 import lombok.Getter;
 import lombok.Setter;
 import java.time.LocalDate;
@@ -9,7 +8,7 @@ import java.time.LocalDate;
 public class PaymentSalaryHistoryDto {
     private Long id;
     private String iban;
-    private Instructor instructor;
+    private Long instructorId;
     private Double salary;
     private LocalDate updateDate;
     private LocalDate createDate;

@@ -1,9 +1,9 @@
 package com.management.paymentservice.initializer;
 
+import com.clients.instructor.InstructorClient;
+import com.clients.instructor.dto.InstructorDto;
 import com.management.paymentservice.model.PaymentSalary;
-import com.management.paymentservice.repository.InstructorRepository;
 import com.management.paymentservice.repository.PaymentSalaryRepository;
-import com.school.management.model.Instructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -15,7 +15,7 @@ import java.time.LocalDate;
 public class TestDataInitializer implements ApplicationRunner {
 
     private final PaymentSalaryRepository paymentSalaryRepository;
-    private final InstructorRepository instructorRepository;
+    private final InstructorClient instructorClient;
     @Override
     public void run(ApplicationArguments args)  {
 
@@ -23,8 +23,8 @@ public class TestDataInitializer implements ApplicationRunner {
           // return;
         //}
 
-        Instructor instructor =instructorRepository.findById(1L).get();
-        PaymentSalary paymentSalary = new PaymentSalary("2323",instructor,80000D);
+        InstructorDto instructor= instructorClient.findInstructorById(1L);
+        PaymentSalary paymentSalary = new PaymentSalary("2323",instructor.getId(),80000D);
         paymentSalary.setCreateDate(LocalDate.of(LocalDate.now().getYear(),LocalDate.now().getMonth(),LocalDate.now().getDayOfMonth()));
         paymentSalaryRepository.save(paymentSalary);
     }

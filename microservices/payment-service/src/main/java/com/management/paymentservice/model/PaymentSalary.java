@@ -1,7 +1,6 @@
 package com.management.paymentservice.model;
 
 import com.management.paymentservice.service.impl.PaymentSalaryHistoryServiceImpl;
-import com.school.management.model.Instructor;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,9 +20,8 @@ public class PaymentSalary {
     private Long id;
     @Column(name = "IBAN")
     private String iban;
-    @ManyToOne
-    @JoinColumn(name="INSTRUCTOR_ID")
-    private Instructor instructor;
+    @Column(name="INSTRUCTOR_ID")
+    private Long instructorId;
     @Column(name = "SALARY")
     private Double salary;
     @Column(name = "UPDATE_DATE")
@@ -31,9 +29,9 @@ public class PaymentSalary {
     @Column(name = "CREATE_DATE")
     private LocalDate createDate;
 
-    public PaymentSalary(String iban, Instructor instructor,Double salary) {
+    public PaymentSalary(String iban, Long instructorId,Double salary) {
         this.iban = iban;
-        this.instructor = instructor;
+        this.instructorId = instructorId;
         this.salary = salary;
     }
 }

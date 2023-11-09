@@ -24,7 +24,7 @@ public class PaymentSalaryHistoryServiceImpl implements PaymentSalaryHistoryServ
         ModelMapper modelMapper = (ModelMapper) applicationContext.getBean("modelMapper");
         PaymentSalaryHistoryRepository repository = (PaymentSalaryHistoryRepository) applicationContext.getBean("paymentSalaryHistoryRepository");
         PaymentSalaryHistory paymentSalaryHistory = modelMapper.map(object, PaymentSalaryHistory.class);
-        paymentSalaryHistory.setInstructorId(((PaymentSalary) object).getInstructor().getId());
+        paymentSalaryHistory.setInstructorId(((PaymentSalary) object).getInstructorId());
         repository.save(paymentSalaryHistory);
     }
 }
