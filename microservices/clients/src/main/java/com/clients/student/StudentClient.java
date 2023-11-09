@@ -1,9 +1,10 @@
-package com.clients.school.student;
+package com.clients.student;
 
-import com.clients.school.student.dto.StudentDto;
-import com.clients.school.student.dto.StudentToCourseDto;
+import com.clients.student.dto.StudentDto;
+import com.clients.student.dto.StudentToCourseDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 @FeignClient("SCHOOL-MANAGEMENT")

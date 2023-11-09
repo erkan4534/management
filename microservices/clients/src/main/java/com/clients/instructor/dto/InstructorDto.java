@@ -1,4 +1,4 @@
-package com.clients.school.instructor.dto;
+package com.clients.instructor.dto;
 
 import lombok.Getter;
 import lombok.Setter;

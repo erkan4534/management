@@ -1,10 +1,12 @@
-package com.clients.school.instructor.dto;
+package com.clients.instructor.dto;
 
+import com.clients.course.dto.CourseDto;
 import lombok.Getter;
 import lombok.Setter;
+
 import java.util.HashSet;
 import java.util.Set;
-import com.clients.school.course.dto.CourseDto;
+
 @Getter
 @Setter
 public class InstructorToCourseDto {
