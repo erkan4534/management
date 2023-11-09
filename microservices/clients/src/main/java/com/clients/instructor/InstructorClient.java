@@ -11,9 +11,9 @@ import java.util.List;
 public interface InstructorClient {
     @GetMapping("/instructors/{id}")
     InstructorToCourseDto findStudentById(@PathVariable Long id);
-    @GetMapping("/instructors")
-    InstructorDto findInstructorById(@RequestParam Long instructorId);
-    @GetMapping("/instructors")
+    @GetMapping("/getInstructor")
+    public InstructorDto findInstructorById(@RequestParam Long instructorId);
+    @GetMapping("/getAllInstructors")
     List<InstructorDto> findAllInstructors();
     @PostMapping("/instructors")
     String saveInstructor(@RequestBody InstructorDto instructorDto);

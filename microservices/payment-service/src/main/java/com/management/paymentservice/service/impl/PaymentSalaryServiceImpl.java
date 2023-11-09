@@ -2,7 +2,6 @@ package com.management.paymentservice.service.impl;
 
 import com.clients.instructor.InstructorClient;
 import com.clients.instructor.dto.InstructorDto;
-import com.management.paymentservice.exception.RecordNotFoundException;
 import com.management.paymentservice.model.PaymentSalary;
 import com.management.paymentservice.model.dto.PaymentSalaryDto;
 import com.management.paymentservice.repository.PaymentSalaryRepository;
@@ -43,7 +42,7 @@ public class PaymentSalaryServiceImpl implements PaymentSalaryService {
     @Transactional
     public String deletePaymentSalary(Long instructorId) {
         instructorClient.findInstructorById(instructorId);
-        paymentSalaryRepository.deleteByInstructor_Id(instructorId);
+        paymentSalaryRepository.deleteByInstructorId(instructorId);
         return "success";
     }
 }
