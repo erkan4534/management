@@ -1,6 +1,6 @@
 package com.management.paymentservice.model.dto;
 
-import com.management.common.model.Instructor;
+import com.school.management.model.Instructor;
 import lombok.Getter;
 import lombok.Setter;
 import java.time.LocalDate;
