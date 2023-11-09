@@ -5,6 +5,7 @@ import java.util.List;
 
 public interface InstructorService {
     InstructorToCourseDto findInstructor(Long instructorId);
+    InstructorDto findByInstructorId(Long instructorId);
     List<InstructorDto> findAllInstructors();
     String updateInstructor(InstructorDto instructorDto);
     String saveInstructor(InstructorDto instructorDto);

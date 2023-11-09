@@ -1,0 +1,20 @@
+package com.clients.school.course;
+
+import com.clients.school.course.dto.CourseDto;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+
+@FeignClient("SCHOOL-MANAGEMENT")
+public interface CourseClient {
+    @GetMapping("/courses/id")
+    CourseDto findCourseById(@RequestParam Long id);
+    @GetMapping("/courses")
+    List<CourseDto> findAllCourses();
+    @PostMapping("/courses")
+    String saveCourse(@RequestBody CourseDto course);
+    @PutMapping("/courses")
+    String updateCourse(@RequestBody CourseDto course);
+    @DeleteMapping("/courses/id")
+    String deleteCourse(@RequestParam Long id);
+}

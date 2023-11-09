@@ -17,7 +17,12 @@ public class InstructorController {
     }
 
     @GetMapping("/instructors")
-    public List<InstructorDto> findAllStudents(){
+    public InstructorDto findInstructorById(@RequestParam Long instructorId){
+        return instructorService.findByInstructorId(instructorId);
+    }
+
+    @GetMapping("/instructors")
+    public List<InstructorDto> findAllInstructors(){
         return instructorService.findAllInstructors();
     }
 
