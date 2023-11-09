@@ -8,8 +8,8 @@ import java.util.List;
 
 @FeignClient("SCHOOL-MANAGEMENT")
 public interface StudentClient {
-    @GetMapping("/getStudents/{id}")
-    StudentDto getStudents(@PathVariable("id") Long id);
+    @GetMapping("/getStudents/{studentId}")
+    StudentDto getStudents(@PathVariable("studentId") Long studentId);
     @GetMapping("/getAllStudents")
     List<StudentDto> getAllStudents();
     @PostMapping("/saveStudent")
@@ -19,6 +19,6 @@ public interface StudentClient {
     @PostMapping("/studentToCourses")
     String studentToCourse(@RequestBody StudentToCourseDto studentToCourseDto);
     @DeleteMapping("/deleteStudent")
-    String deleteStudent(@RequestParam("id") Long id);
+    String deleteStudent(@RequestParam("studentId") Long studentId);
 }
 
