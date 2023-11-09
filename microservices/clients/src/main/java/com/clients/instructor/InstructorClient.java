@@ -11,7 +11,7 @@ public interface InstructorClient {
     @GetMapping("/instructors/{id}")
     InstructorToCourseDto findStudentById(@PathVariable("id") Long id);
     @GetMapping("/getInstructor")
-    InstructorDto getInstructor(@RequestParam("instructorId") Long instructorId);
+    InstructorDto getInstructor(@RequestParam("id") Long id);
     @GetMapping("/getAllInstructors")
     List<InstructorDto> getAllInstructors();
     @PostMapping("/saveInstructor")
