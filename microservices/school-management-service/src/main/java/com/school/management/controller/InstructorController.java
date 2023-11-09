@@ -11,9 +11,9 @@ import java.util.List;
 public class InstructorController {
 
     private final InstructorService instructorService;
-    @GetMapping("/instructors/{id}")
-    public InstructorToCourseDto findStudentById(@PathVariable Long id){
-        return instructorService.findStudentById(id);
+    @GetMapping("/getInstructorDetailInfo/{id}")
+    public InstructorDetailInfoDto getInstructorDetailInfo(@PathVariable Long id){
+        return instructorService.getInstructorDetailInfo(id);
     }
 
     @GetMapping("/getInstructor")

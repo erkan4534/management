@@ -4,7 +4,7 @@ import com.school.management.model.dto.*;
 import java.util.List;
 
 public interface InstructorService {
-    InstructorToCourseDto findStudentById( Long id);
+    InstructorDetailInfoDto getInstructorDetailInfo(Long id);
     InstructorDto getInstructor(Long id);
     List<InstructorDto> getAllInstructors();
     String saveInstructor(InstructorDto instructorDto);

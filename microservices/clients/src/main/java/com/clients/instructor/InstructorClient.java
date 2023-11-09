@@ -8,8 +8,8 @@ import java.util.List;
 
 @FeignClient("SCHOOL-MANAGEMENT")
 public interface InstructorClient {
-    @GetMapping("/instructors/{id}")
-    InstructorToCourseDto findStudentById(@PathVariable("id") Long id);
+    @GetMapping("/getInstructorDetailInfo/{id}")
+    InstructorToCourseDto getInstructorDetailInfo(@PathVariable("id") Long id);
     @GetMapping("/getInstructor")
     InstructorDto getInstructor(@RequestParam("id") Long id);
     @GetMapping("/getAllInstructors")
