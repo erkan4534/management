@@ -13,12 +13,12 @@ public class StudentController {
     private final StudentService studentService;
     @GetMapping("/students/{id}")
     public StudentDto findStudentById(@PathVariable("id") Long id){
-        return studentService.findStudent(id);
+        return studentService.getStudent(id);
     }
 
     @GetMapping("/students")
     public List<StudentDto> findAllStudents(){
-        return studentService.findAllStudents();
+        return studentService.getAllStudents();
     }
 
     @PostMapping("/students")

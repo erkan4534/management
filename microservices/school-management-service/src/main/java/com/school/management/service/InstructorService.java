@@ -4,10 +4,10 @@ import com.school.management.model.dto.*;
 import java.util.List;
 
 public interface InstructorService {
-    InstructorToCourseDto findInstructor(Long instructorId);
-    InstructorDto findByInstructorId(Long instructorId);
-    List<InstructorDto> findAllInstructors();
-    String updateInstructor(InstructorDto instructorDto);
+    InstructorToCourseDto findStudentById( Long id);
+    InstructorDto getInstructor(Long instructorId);
+    List<InstructorDto> getAllInstructors();
     String saveInstructor(InstructorDto instructorDto);
-    String deleteInstructor(Long instructorId);
+    String updateInstructor(InstructorDto instructorDto);
+    String deleteInstructor(Long id);
 }

@@ -24,21 +24,21 @@ public class InstructorServiceImpl implements InstructorService {
     private final RestTemplate restTemplate;
 
     @Override
-    public InstructorToCourseDto findInstructor(Long instructorId) {
+    public InstructorToCourseDto findStudentById(Long instructorId) {
         Instructor InstructorEntity  =instructorRepository.findById(instructorId).orElseThrow(()->
                 new RecordNotFoundException("Instructor not found with ID :"+instructorId));
         return this.modelMapper.map(InstructorEntity, InstructorToCourseDto.class);
     }
 
     @Override
-    public InstructorDto findByInstructorId(Long instructorId) {
+    public InstructorDto getInstructor(Long instructorId) {
         Instructor InstructorEntity  =instructorRepository.findById(instructorId).orElseThrow(()->
                 new RecordNotFoundException("Instructor not found with ID :"+instructorId));
         return this.modelMapper.map(InstructorEntity, InstructorDto.class);
     }
 
     @Override
-    public List<InstructorDto> findAllInstructors() {
+    public List<InstructorDto> getAllInstructors() {
         List<Instructor> instructorEntities = instructorRepository.findAll();
         return this.modelMapper.map(instructorEntities, new TypeToken<List<InstructorDto>>(){}.getType());
     }

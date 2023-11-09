@@ -6,6 +6,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @FeignClient("PAYMENT-SERVICE")
 public interface PaymentClient {
-    @DeleteMapping("/payment-salary")
+    @DeleteMapping("/deletePaymentSalary")
     String deletePaymentSalary(@RequestParam("instructorId") Long instructorId);
 }

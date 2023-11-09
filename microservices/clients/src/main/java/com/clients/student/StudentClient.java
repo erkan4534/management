@@ -8,17 +8,17 @@ import java.util.List;
 
 @FeignClient("SCHOOL-MANAGEMENT")
 public interface StudentClient {
-    @GetMapping("/students/{id}")
-    StudentDto findStudentById(@PathVariable("id") Long id);
-    @GetMapping("/students")
-    List<StudentDto> findAllStudents();
-    @PostMapping("/students")
+    @GetMapping("/getStudents/{id}")
+    StudentDto getStudents(@PathVariable("id") Long id);
+    @GetMapping("/getAllStudents")
+    List<StudentDto> getAllStudents();
+    @PostMapping("/saveStudent")
     String saveStudent(@RequestBody StudentDto studentDto);
-    @PutMapping("/students")
+    @PutMapping("/updateStudent")
     String updateStudent(@RequestBody StudentDto studentDto);
     @PostMapping("/studentToCourses")
     String studentToCourse(@RequestBody StudentToCourseDto studentToCourseDto);
-    @DeleteMapping("/students")
+    @DeleteMapping("/deleteStudent")
     String deleteStudent(@RequestParam("id") Long id);
 }
 

@@ -13,30 +13,30 @@ public class InstructorController {
     private final InstructorService instructorService;
     @GetMapping("/instructors/{id}")
     public InstructorToCourseDto findStudentById(@PathVariable Long id){
-        return instructorService.findInstructor(id);
+        return instructorService.findStudentById(id);
     }
 
-    @GetMapping("/getInstructors")
-    public InstructorDto findInstructorById(@RequestParam("instructorId") Long instructorId){
-        return instructorService.findByInstructorId(instructorId);
+    @GetMapping("/getInstructor")
+    public InstructorDto getInstructor(@RequestParam("instructorId") Long instructorId){
+        return instructorService.getInstructor(instructorId);
     }
 
     @GetMapping("/getAllInstructors")
-    public List<InstructorDto> findAllInstructors(){
-        return instructorService.findAllInstructors();
+    public List<InstructorDto> getAllInstructors(){
+        return instructorService.getAllInstructors();
     }
 
-    @PostMapping("/instructors")
+    @PostMapping("/saveInstructor")
     public String saveInstructor(@RequestBody InstructorDto instructorDto){
         return instructorService.saveInstructor(instructorDto);
     }
 
-    @PutMapping("/instructors")
+    @PutMapping("/updateInstructor")
     public String updateInstructor(@RequestBody InstructorDto instructorDto){
         return instructorService.updateInstructor(instructorDto);
     }
 
-    @DeleteMapping("/instructors")
+    @DeleteMapping("/deleteInstructorId")
     public String deleteInstructorId(@RequestParam("id") Long id){
         return instructorService.deleteInstructor(id);
     }

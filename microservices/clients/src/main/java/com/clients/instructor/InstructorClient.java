@@ -10,14 +10,14 @@ import java.util.List;
 public interface InstructorClient {
     @GetMapping("/instructors/{id}")
     InstructorToCourseDto findStudentById(@PathVariable("id") Long id);
-    @GetMapping("/getInstructors")
-    InstructorDto findInstructorById(@RequestParam("instructorId") Long instructorId);
+    @GetMapping("/getInstructor")
+    InstructorDto getInstructor(@RequestParam("instructorId") Long instructorId);
     @GetMapping("/getAllInstructors")
-    List<InstructorDto> findAllInstructors();
-    @PostMapping("/instructors")
+    List<InstructorDto> getAllInstructors();
+    @PostMapping("/saveInstructor")
     String saveInstructor(@RequestBody InstructorDto instructorDto);
-    @PutMapping("/instructors")
+    @PutMapping("/updateInstructor")
     String updateInstructor(@RequestBody InstructorDto instructorDto);
-    @DeleteMapping("/instructors")
+    @DeleteMapping("/deleteInstructor")
     String deleteInstructorId(@RequestParam("id") Long id);
 }

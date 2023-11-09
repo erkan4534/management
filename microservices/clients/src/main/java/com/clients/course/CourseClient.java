@@ -8,14 +8,14 @@ import java.util.List;
 
 @FeignClient("SCHOOL-MANAGEMENT")
 public interface CourseClient {
-    @GetMapping("/getCourses")
-    CourseDto findCourseById(@RequestParam Long id);
+    @GetMapping("/getCourse")
+    CourseDto getCourse(@RequestParam Long id);
     @GetMapping("/getAllCourses")
-    List<CourseDto> findAllCourses();
-    @PostMapping("/courses")
+    List<CourseDto> getAllCourses();
+    @PostMapping("/saveCourse")
     String saveCourse(@RequestBody CourseDto course);
-    @PutMapping("/courses")
+    @PutMapping("/updateCourse")
     String updateCourse(@RequestBody CourseDto course);
-    @DeleteMapping("/courses/id")
+    @DeleteMapping("/deleteCourse")
     String deleteCourse(@RequestParam Long id);
 }

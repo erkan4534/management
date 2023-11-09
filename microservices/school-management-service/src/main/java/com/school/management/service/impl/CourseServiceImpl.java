@@ -24,7 +24,7 @@ public class CourseServiceImpl implements CourseService {
     private final ModelMapper modelMapper;
 
     @Override
-    public CourseDto findCourse(Long courseId) {
+    public CourseDto getCourse(Long courseId) {
         Course courseEntity =courseRepository.findById(courseId).orElseThrow(()->
                 new RecordNotFoundException("Course not found with ID :"+courseId));
         CourseDto courseDto = this.modelMapper.map(courseEntity, CourseDto.class);
@@ -33,7 +33,7 @@ public class CourseServiceImpl implements CourseService {
     }
 
     @Override
-    public List<CourseDto> findAllCourses() {
+    public List<CourseDto> getAllCourses() {
         List<Course> courseEntities =courseRepository.findAll();
         List<CourseDto> courses= courseEntities.stream().map(a->{
             CourseDto courseDto = this.modelMapper.map(a, CourseDto.class);

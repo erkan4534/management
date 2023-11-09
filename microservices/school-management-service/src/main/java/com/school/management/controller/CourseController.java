@@ -11,27 +11,27 @@ import java.util.List;
 public class CourseController {
 
     private final CourseService courseService;
-    @GetMapping("/getCourses")
+    @GetMapping("/getCourse")
     public CourseDto findCourseById(@RequestParam("id") Long id){
-        return courseService.findCourse(id);
+        return courseService.getCourse(id);
     }
 
     @GetMapping("/getAllCourses")
     public List<CourseDto> findAllCourses(){
-        return courseService.findAllCourses();
+        return courseService.getAllCourses();
     }
 
-    @PostMapping("/courses")
+    @PostMapping("/saveCourse")
     public String saveCourse(@RequestBody CourseDto course){
         return courseService.saveCourse(course);
     }
 
-    @PutMapping("/courses")
+    @PutMapping("/updateCourse")
     public String updateCourse(@RequestBody CourseDto course){
         return courseService.updateCourse(course);
     }
 
-    @DeleteMapping("/courses")
+    @DeleteMapping("/deleteCourse")
     public String deleteCourse(@RequestParam("id") Long id){
         return courseService.deleteCourse(id);
     }
