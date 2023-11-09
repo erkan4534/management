@@ -5,25 +5,17 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.management</groupId>
-        <artifactId>management</artifactId>
+        <artifactId>microservices</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <packaging>pom</packaging>
-    <artifactId>microservices</artifactId>
+
+    <groupId>com.management.client</groupId>
+    <artifactId>clients</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
-    <modules>
-        <module>eureka-server</module>
-        <module>validation-service</module>
-        <module>school-management-service</module>
-        <module>notification-service</module>
-        <module>payment-service</module>
-        <module>clients</module>
-    </modules>
 
 </project>
