@@ -2,9 +2,9 @@ package com.management.paymentservice.service.impl;
 
 import com.clients.instructor.InstructorClient;
 import com.clients.instructor.dto.InstructorDto;
+import com.clients.payment.dto.PaymentSalaryDto;
 import com.management.paymentservice.exception.RecordNotFoundException;
 import com.management.paymentservice.model.PaymentSalary;
-import com.management.paymentservice.model.dto.PaymentSalaryDto;
 import com.management.paymentservice.repository.PaymentSalaryRepository;
 import com.management.paymentservice.service.PaymentSalaryService;
 import lombok.RequiredArgsConstructor;

@@ -1,10 +1,9 @@
 package com.management.paymentservice.controller;
 
-import com.management.paymentservice.model.dto.PaymentSalaryDto;
 import com.management.paymentservice.service.PaymentSalaryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-
+import com.clients.payment.dto.PaymentSalaryDto;
 import java.util.List;
 
 @RestController
@@ -37,7 +36,4 @@ public class PaymentController {
     public String deletePaymentSalary(@RequestParam("instructorId") Long instructorId){
         return paymentSalaryService.deletePaymentSalary(instructorId);
     }
-
-
-
 }
