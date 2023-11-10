@@ -19,9 +19,9 @@ public class TestDataInitializer implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args)  {
 
-        //if(paymentSalaryRepository.findAll().size()>0){
-          // return;
-        //}
+        if(paymentSalaryRepository.findAll().size()>0){
+           return;
+        }
 
         InstructorDto instructor= instructorClient.getInstructor(1L);
         PaymentSalary paymentSalary = new PaymentSalary("2323",instructor.getId(),80000D);
