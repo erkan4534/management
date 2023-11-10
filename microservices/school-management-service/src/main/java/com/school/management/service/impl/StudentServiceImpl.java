@@ -1,7 +1,7 @@
 package com.school.management.service.impl;
 
+import com.clients.student.dto.*;
 import com.school.management.model.*;
-import com.school.management.model.dto.*;
 import com.school.management.exception.RecordNotFoundException;
 import com.school.management.repository.CourseRepository;
 import com.school.management.repository.CourseToStudentRepository;

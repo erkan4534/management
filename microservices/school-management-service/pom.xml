@@ -54,7 +54,7 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.management.clients</groupId>
+            <groupId>com.management</groupId>
             <artifactId>clients</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>

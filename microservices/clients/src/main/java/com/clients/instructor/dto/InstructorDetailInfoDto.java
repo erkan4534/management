@@ -9,7 +9,7 @@ import java.util.Set;
 
 @Getter
 @Setter
-public class InstructorToCourseDto {
+public class InstructorDetailInfoDto {
     private Long id;
     private String name;
     private String phoneNumber;

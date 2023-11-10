@@ -1,6 +1,6 @@
 package com.school.management.controller;
 
-import com.school.management.model.dto.*;
+import com.clients.instructor.dto.*;
 import com.school.management.service.InstructorService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

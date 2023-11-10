@@ -1,7 +1,7 @@
 package com.clients.instructor;
 
 import com.clients.instructor.dto.InstructorDto;
-import com.clients.instructor.dto.InstructorToCourseDto;
+import com.clients.instructor.dto.InstructorDetailInfoDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.List;
 @FeignClient("SCHOOL-MANAGEMENT")
 public interface InstructorClient {
     @GetMapping("/getInstructorDetailInfo/{instructorId}")
-    InstructorToCourseDto getInstructorDetailInfo(@PathVariable("instructorId") Long instructorId);
+    InstructorDetailInfoDto getInstructorDetailInfo(@PathVariable("instructorId") Long instructorId);
     @GetMapping("/getInstructorById")
     InstructorDto getInstructorById(@RequestParam("instructorId") Long instructorId);
     @GetMapping("/getAllInstructors")
