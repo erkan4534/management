@@ -48,7 +48,9 @@ public class PaymentSalaryServiceImpl implements PaymentSalaryService {
 
     @Override
     public String updatePaymentSalary(PaymentSalaryDto paymentSalaryDto) {
-        PaymentSalary paymentSalary = this.modelMapper.map(paymentSalaryDto, PaymentSalary.class);
+        PaymentSalary paymentSalary = paymentSalaryRepository.findById(paymentSalaryDto.getId()).orElseThrow(()->
+                new RecordNotFoundException("Payment not found with ID :"+paymentSalaryDto.getId()));
+        this.modelMapper.map(paymentSalaryDto, paymentSalary);
         InstructorDto instructorDto = instructorClient.getInstructorById(paymentSalaryDto.getInstructorId());
         paymentSalary.setInstructorId(instructorDto.getId());
         paymentSalary.setUpdateDate(LocalDate.of(LocalDate.now().getYear(),LocalDate.now().getMonth(),LocalDate.now().getDayOfMonth()));
