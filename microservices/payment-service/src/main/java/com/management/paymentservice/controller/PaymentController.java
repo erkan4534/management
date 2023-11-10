@@ -10,17 +10,28 @@ import org.springframework.web.bind.annotation.*;
 public class PaymentController {
 
     private final PaymentSalaryService paymentSalaryService;
-    @PostMapping("/payment-salary")
+
+    @GetMapping("getPaymentSalaryByInstructorId")
+    public PaymentSalaryDto getPaymentSalaryByInstructorId(@RequestParam("instructorId")Long instructorId) {
+       return paymentSalaryService.getPaymentSalaryByInstructorId(instructorId);
+    }
+
+    @GetMapping("getPaymentSalaryByPaymentId")
+    public PaymentSalaryDto getPaymentSalaryByPaymentId(@RequestParam("paymentId")Long paymentId) {
+        return paymentSalaryService.getPaymentSalaryByPaymentId(paymentId);
+    }
+
+    @PostMapping("/savePaymentSalary")
     public String savePaymentSalary(@RequestBody PaymentSalaryDto paymentSalaryDto){
        return paymentSalaryService.savePaymentSalary(paymentSalaryDto);
     }
 
-    @PutMapping("/payment-salary")
+    @PutMapping("/updatePaymentSalary")
     public String updatePaymentSalary(@RequestBody PaymentSalaryDto paymentSalaryDto){
         return paymentSalaryService.updatePaymentSalary(paymentSalaryDto);
     }
 
-    @DeleteMapping("/payment-salary")
+    @DeleteMapping("/deletePaymentSalary")
     public String deletePaymentSalary(@RequestParam("instructorId") Long instructorId){
         return paymentSalaryService.deletePaymentSalary(instructorId);
     }
