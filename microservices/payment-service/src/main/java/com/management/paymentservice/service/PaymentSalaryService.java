@@ -1,7 +1,6 @@
 package com.management.paymentservice.service;
 
 import com.management.paymentservice.model.dto.PaymentSalaryDto;
-
 import java.util.List;
 
 public interface PaymentSalaryService {
