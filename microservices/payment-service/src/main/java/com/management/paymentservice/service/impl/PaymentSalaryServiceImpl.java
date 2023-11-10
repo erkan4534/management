@@ -22,7 +22,7 @@ public class PaymentSalaryServiceImpl implements PaymentSalaryService {
 
     @Override
     public PaymentSalaryDto getPaymentSalaryByInstructorId(Long instructorId) {
-        PaymentSalary paymentSalary = paymentSalaryRepository.getByInstructorId(instructorId);
+        PaymentSalary paymentSalary = paymentSalaryRepository.findByInstructorId(instructorId);
         PaymentSalaryDto paymentSalaryDto = this.modelMapper.map(paymentSalary, PaymentSalaryDto.class);
         return paymentSalaryDto;
     }
