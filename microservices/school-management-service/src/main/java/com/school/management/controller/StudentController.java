@@ -11,9 +11,9 @@ import java.util.List;
 public class StudentController {
 
     private final StudentService studentService;
-    @GetMapping("/getStudent/{studentId}")
-    public StudentDto getStudent(@PathVariable("studentId") Long studentId){
-        return studentService.getStudent(studentId);
+    @GetMapping("/getStudentById/{studentId}")
+    public StudentDto getStudentById(@PathVariable("studentId") Long studentId){
+        return studentService.getStudentById(studentId);
     }
 
     @GetMapping("/getAllStudents")

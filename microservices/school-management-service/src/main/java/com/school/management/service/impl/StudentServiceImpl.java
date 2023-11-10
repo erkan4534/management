@@ -23,7 +23,7 @@ public class StudentServiceImpl implements StudentService {
     private final CourseToStudentRepository courseToStudentRepository;
     private final ModelMapper modelMapper;
     @Override
-    public StudentDto getStudent(Long studentId) {
+    public StudentDto getStudentById(Long studentId) {
         Student studentEntity  = studentRepository.findById(studentId).orElseThrow(()->
                 new RecordNotFoundException("Student not found with ID :"+studentId));
         return this.modelMapper.map(studentEntity, StudentDto.class);

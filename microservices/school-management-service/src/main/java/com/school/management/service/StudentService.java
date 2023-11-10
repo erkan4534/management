@@ -4,7 +4,7 @@ import com.school.management.model.dto.*;
 import java.util.List;
 
 public interface StudentService {
-    StudentDto getStudent(Long studentId);
+    StudentDto getStudentById(Long studentId);
     List<StudentDto> getAllStudents();
     String updateStudent(StudentDto studentDto);
     String saveStudent(StudentDto studentDto);
