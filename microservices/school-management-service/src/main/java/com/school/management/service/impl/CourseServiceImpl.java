@@ -24,7 +24,7 @@ public class CourseServiceImpl implements CourseService {
     private final ModelMapper modelMapper;
 
     @Override
-    public CourseDto getCourse(Long courseId) {
+    public CourseDto getCourseById(Long courseId) {
         Course courseEntity =courseRepository.findById(courseId).orElseThrow(()->
                 new RecordNotFoundException("Course not found with ID :"+courseId));
         CourseDto courseDto = this.modelMapper.map(courseEntity, CourseDto.class);

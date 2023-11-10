@@ -11,9 +11,9 @@ import java.util.List;
 public class CourseController {
 
     private final CourseService courseService;
-    @GetMapping("/getCourse")
-    public CourseDto findCourseById(@RequestParam("courseId") Long courseId){
-        return courseService.getCourse(courseId);
+    @GetMapping("/getCourseById")
+    public CourseDto getCourseById(@RequestParam("courseId") Long courseId){
+        return courseService.getCourseById(courseId);
     }
 
     @GetMapping("/getAllCourses")

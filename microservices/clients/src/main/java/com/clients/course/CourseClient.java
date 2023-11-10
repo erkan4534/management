@@ -8,8 +8,8 @@ import java.util.List;
 
 @FeignClient("SCHOOL-MANAGEMENT")
 public interface CourseClient {
-    @GetMapping("/getCourse")
-    CourseDto getCourse(@RequestParam("courseId") Long courseId);
+    @GetMapping("/getCourseById")
+    CourseDto getCourseById(@RequestParam("courseId") Long courseId);
     @GetMapping("/getAllCourses")
     List<CourseDto> getAllCourses();
     @PostMapping("/saveCourse")

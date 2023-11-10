@@ -4,7 +4,7 @@ import com.school.management.model.dto.*;
 import java.util.List;
 
 public interface CourseService {
-    CourseDto getCourse(Long courseId);
+    CourseDto getCourseById(Long courseId);
     List<CourseDto> getAllCourses();
     String saveCourse(CourseDto course);
     String updateCourse(CourseDto course);
