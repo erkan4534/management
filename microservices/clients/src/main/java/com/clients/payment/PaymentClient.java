@@ -3,11 +3,12 @@ package com.clients.payment;
 import com.clients.payment.dto.PaymentSalaryDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
+import java.util.List;
 
 @FeignClient("PAYMENT-SERVICE")
 public interface PaymentClient {
     @GetMapping("getPaymentSalaryByInstructorId")
-    PaymentSalaryDto getPaymentSalaryByInstructorId(@RequestParam("instructorId")Long instructorId);
+    List<PaymentSalaryDto> getPaymentSalaryByInstructorId(@RequestParam("instructorId")Long instructorId);
     @GetMapping("getPaymentSalaryByPaymentId")
     PaymentSalaryDto getPaymentSalaryByPaymentId(@RequestParam("paymentId")Long paymentId);
     @PostMapping("/savePaymentSalary")

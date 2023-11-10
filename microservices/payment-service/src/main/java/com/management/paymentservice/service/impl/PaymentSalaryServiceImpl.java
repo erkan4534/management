@@ -9,9 +9,11 @@ import com.management.paymentservice.repository.PaymentSalaryRepository;
 import com.management.paymentservice.service.PaymentSalaryService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.time.LocalDate;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -21,10 +23,9 @@ public class PaymentSalaryServiceImpl implements PaymentSalaryService {
     private final InstructorClient instructorClient;
 
     @Override
-    public PaymentSalaryDto getPaymentSalaryByInstructorId(Long instructorId) {
-        PaymentSalary paymentSalary = paymentSalaryRepository.findByInstructorId(instructorId);
-        PaymentSalaryDto paymentSalaryDto = this.modelMapper.map(paymentSalary, PaymentSalaryDto.class);
-        return paymentSalaryDto;
+    public List<PaymentSalaryDto> getPaymentSalaryByInstructorId(Long instructorId) {
+        List<PaymentSalary> paymentSalaries = paymentSalaryRepository.findByInstructorId(instructorId);
+        return this.modelMapper.map(paymentSalaries, new TypeToken<List<PaymentSalaryDto>>(){}.getType());
     }
 
     @Override

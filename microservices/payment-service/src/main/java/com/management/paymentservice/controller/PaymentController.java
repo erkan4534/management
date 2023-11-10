@@ -5,6 +5,8 @@ import com.management.paymentservice.service.PaymentSalaryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 public class PaymentController {
@@ -12,7 +14,7 @@ public class PaymentController {
     private final PaymentSalaryService paymentSalaryService;
 
     @GetMapping("getPaymentSalaryByInstructorId")
-    public PaymentSalaryDto getPaymentSalaryByInstructorId(@RequestParam("instructorId")Long instructorId) {
+    public List<PaymentSalaryDto> getPaymentSalaryByInstructorId(@RequestParam("instructorId")Long instructorId) {
        return paymentSalaryService.getPaymentSalaryByInstructorId(instructorId);
     }
 
