@@ -5,11 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
-@EnableFeignClients(
-        basePackages = {
-                "com.clients.instructor"
-        }
-)
+@EnableFeignClients(basePackages = "com.clients.instructor")
 @SpringBootApplication
 @EnableDiscoveryClient
 public class PaymentServiceApplication {
