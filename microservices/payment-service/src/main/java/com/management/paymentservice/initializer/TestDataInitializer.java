@@ -23,7 +23,7 @@ public class TestDataInitializer implements ApplicationRunner {
            return;
         }
 
-        InstructorDto instructor= instructorClient.getInstructor(1L);
+        InstructorDto instructor= instructorClient.getInstructorById(1L);
         PaymentSalary paymentSalary = new PaymentSalary("2323",instructor.getId(),80000D);
         paymentSalary.setCreateDate(LocalDate.of(LocalDate.now().getYear(),LocalDate.now().getMonth(),LocalDate.now().getDayOfMonth()));
         paymentSalaryRepository.save(paymentSalary);

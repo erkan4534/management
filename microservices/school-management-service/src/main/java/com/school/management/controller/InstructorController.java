@@ -16,9 +16,9 @@ public class InstructorController {
         return instructorService.getInstructorDetailInfo(instructorId);
     }
 
-    @GetMapping("/getInstructor")
-    public InstructorDto getInstructor(@RequestParam("instructorId") Long instructorId){
-        return instructorService.getInstructor(instructorId);
+    @GetMapping("/getInstructorById")
+    public InstructorDto getInstructorById(@RequestParam("instructorId") Long instructorId){
+        return instructorService.getInstructorById(instructorId);
     }
 
     @GetMapping("/getAllInstructors")

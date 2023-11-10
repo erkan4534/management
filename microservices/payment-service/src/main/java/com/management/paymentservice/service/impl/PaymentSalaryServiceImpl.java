@@ -38,7 +38,7 @@ public class PaymentSalaryServiceImpl implements PaymentSalaryService {
     @Override
     public String savePaymentSalary(PaymentSalaryDto paymentSalaryDto) {
         PaymentSalary paymentSalary = this.modelMapper.map(paymentSalaryDto, PaymentSalary.class);
-        InstructorDto instructorDto = instructorClient.getInstructor(paymentSalaryDto.getInstructorId());
+        InstructorDto instructorDto = instructorClient.getInstructorById(paymentSalaryDto.getInstructorId());
         paymentSalary.setInstructorId(instructorDto.getId());
         paymentSalary.setCreateDate(LocalDate.of(LocalDate.now().getYear(),LocalDate.now().getMonth(),LocalDate.now().getDayOfMonth()));
         paymentSalaryRepository.save(paymentSalary);
@@ -48,7 +48,7 @@ public class PaymentSalaryServiceImpl implements PaymentSalaryService {
     @Override
     public String updatePaymentSalary(PaymentSalaryDto paymentSalaryDto) {
         PaymentSalary paymentSalary = this.modelMapper.map(paymentSalaryDto, PaymentSalary.class);
-        InstructorDto instructorDto = instructorClient.getInstructor(paymentSalaryDto.getInstructorId());
+        InstructorDto instructorDto = instructorClient.getInstructorById(paymentSalaryDto.getInstructorId());
         paymentSalary.setInstructorId(instructorDto.getId());
         paymentSalary.setUpdateDate(LocalDate.of(LocalDate.now().getYear(),LocalDate.now().getMonth(),LocalDate.now().getDayOfMonth()));
         paymentSalaryRepository.save(paymentSalary);
@@ -58,7 +58,7 @@ public class PaymentSalaryServiceImpl implements PaymentSalaryService {
     @Override
     @Transactional
     public String deletePaymentSalary(Long instructorId) {
-        instructorClient.getInstructor(instructorId);
+        instructorClient.getInstructorById(instructorId);
         paymentSalaryRepository.deleteByInstructorId(instructorId);
         return "success";
     }

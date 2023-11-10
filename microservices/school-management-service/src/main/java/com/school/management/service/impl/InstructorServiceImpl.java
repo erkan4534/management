@@ -31,7 +31,7 @@ public class InstructorServiceImpl implements InstructorService {
     }
 
     @Override
-    public InstructorDto getInstructor(Long instructorId) {
+    public InstructorDto getInstructorById(Long instructorId) {
         Instructor InstructorEntity  =instructorRepository.findById(instructorId).orElseThrow(()->
                 new RecordNotFoundException("Instructor not found with ID :"+instructorId));
         return this.modelMapper.map(InstructorEntity, InstructorDto.class);
