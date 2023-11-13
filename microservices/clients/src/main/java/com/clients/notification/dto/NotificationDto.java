@@ -1,4 +1,4 @@
-package com.clients.notification;
+package com.clients.notification.dto;
 
 
 import lombok.AllArgsConstructor;
@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class NotificationRequest {
+public class NotificationDto {
     private Long toCustomerId;
     private String toCustomerPhone;
     private String message;

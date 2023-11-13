@@ -1,6 +1,6 @@
 package com.management.notification.service;
 
-import com.clients.notification.NotificationRequest;
+import com.clients.notification.dto.NotificationDto;
 import com.management.notification.model.Notification;
 import com.management.notification.repository.NotificationEntityRepository;
 import lombok.RequiredArgsConstructor;
@@ -15,7 +15,7 @@ public class NotificationService {
 
     private final NotificationEntityRepository repository;
 
-    public void sendNotification(NotificationRequest request) {
+    public void sendNotification(NotificationDto request) {
         repository.save(
                 Notification.builder()
                         .toCustomerId(request.getToCustomerId())
