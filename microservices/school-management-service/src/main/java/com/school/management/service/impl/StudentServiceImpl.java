@@ -8,6 +8,7 @@ import com.school.management.repository.CourseToStudentRepository;
 import com.school.management.repository.StudentRepository;
 import com.school.management.service.StudentService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.stereotype.Service;
@@ -16,6 +17,7 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @Service
+@Slf4j
 public class StudentServiceImpl implements StudentService {
 
     private final StudentRepository studentRepository;
@@ -32,6 +34,7 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public List<StudentDto> getAllStudents() {
         List<Student> studentEntities = studentRepository.findAll();
+        log.info("get all student successful");
         return this.modelMapper.map(studentEntities, new TypeToken<List<StudentDto>>(){}.getType());
     }
 

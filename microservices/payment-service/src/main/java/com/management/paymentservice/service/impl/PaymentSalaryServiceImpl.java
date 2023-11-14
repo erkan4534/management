@@ -8,6 +8,7 @@ import com.management.paymentservice.model.PaymentSalary;
 import com.management.paymentservice.repository.PaymentSalaryRepository;
 import com.management.paymentservice.service.PaymentSalaryService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.stereotype.Service;
@@ -17,6 +18,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class PaymentSalaryServiceImpl implements PaymentSalaryService {
     private final ModelMapper modelMapper;
     private final PaymentSalaryRepository paymentSalaryRepository;
@@ -55,6 +57,7 @@ public class PaymentSalaryServiceImpl implements PaymentSalaryService {
         paymentSalary.setInstructorId(instructorDto.getId());
         paymentSalary.setUpdateDate(LocalDate.of(LocalDate.now().getYear(),LocalDate.now().getMonth(),LocalDate.now().getDayOfMonth()));
         paymentSalaryRepository.save(paymentSalary);
+        log.info("Payment salary successfully!");
         return "success";
     }
 
