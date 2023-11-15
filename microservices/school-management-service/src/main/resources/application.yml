@@ -10,19 +10,22 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+    show-sql: true
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
-    show-sql: true
+  zipkin:
+    base-url: http://localhost:9411
 management:
   endpoints:
     web:
       exposure:
         include: '*'
-  endpoint:
-    health:
-      show-details: always
+  tracing:
+    sampling:
+      probability: 1.0
+
 eureka:
   client:
     service-url:
