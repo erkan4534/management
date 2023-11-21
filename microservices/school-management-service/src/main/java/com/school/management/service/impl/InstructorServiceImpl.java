@@ -45,8 +45,16 @@ public class InstructorServiceImpl implements InstructorService {
 
     @Override
     public String updateInstructor(InstructorDto instructorDto) {
-        Instructor instructorEntity = this.modelMapper.map(instructorDto, Instructor.class);
-        instructorRepository.save(instructorEntity);
+
+        Instructor instructor =instructorRepository.findById(instructorDto.getId()).get();
+
+        if(instructor instanceof PermanentInstructor){
+            PermanentInstructor instructorEntity = this.modelMapper.map(instructorDto, PermanentInstructor.class);
+            instructorRepository.save(instructorEntity);
+        }else{
+            VisitingResearcher instructorEntity = this.modelMapper.map(instructorDto, VisitingResearcher.class);
+            instructorRepository.save(instructorEntity);
+        }
         return "success";
     }
 
