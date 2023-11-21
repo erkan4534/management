@@ -1,5 +1,8 @@
 package com.management.paymentservice.configuration;
 
+import feign.Capability;
+import feign.micrometer.MicrometerCapability;
+import io.micrometer.core.instrument.MeterRegistry;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
@@ -31,6 +34,11 @@ public class ApplicationConfig {
                 .info(new Info()
                         .title("School Management OpenAPI Docs")
                         .version("1.0.0").description("Doc Description"));
+    }
+
+    @Bean
+    public Capability capability(final MeterRegistry registry) {
+        return new MicrometerCapability(registry);
     }
 
     @Bean
