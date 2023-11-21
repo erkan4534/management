@@ -7,6 +7,7 @@ import com.school.management.repository.CourseRepository;
 import com.school.management.repository.InstructorRepository;
 import com.school.management.service.InstructorService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.stereotype.Service;
@@ -16,6 +17,7 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @Service
+@Slf4j
 public class InstructorServiceImpl implements InstructorService {
 
     private final InstructorRepository instructorRepository;
@@ -34,6 +36,7 @@ public class InstructorServiceImpl implements InstructorService {
     public InstructorDto getInstructorById(Long instructorId) {
         Instructor InstructorEntity  =instructorRepository.findById(instructorId).orElseThrow(()->
                 new RecordNotFoundException("Instructor not found with ID :"+instructorId));
+        log.info("get instructor success");
         return this.modelMapper.map(InstructorEntity, InstructorDto.class);
     }
 

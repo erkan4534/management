@@ -45,6 +45,7 @@ public class PaymentSalaryServiceImpl implements PaymentSalaryService {
         paymentSalary.setInstructorId(instructorDto.getId());
         paymentSalary.setCreateDate(LocalDate.of(LocalDate.now().getYear(),LocalDate.now().getMonth(),LocalDate.now().getDayOfMonth()));
         paymentSalaryRepository.save(paymentSalary);
+        log.info("Payment salary successfully!");
         return "success";
     }
 
