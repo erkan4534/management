@@ -24,6 +24,7 @@
         <module>notification-service</module>
         <module>payment-service</module>
         <module>clients</module>
+        <module>apigateway</module>
     </modules>
 
 </project>
