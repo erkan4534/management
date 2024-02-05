@@ -6,7 +6,10 @@ spring:
     cloud:
       gateway:
         routes:
-
+          - id: insurance
+            uri: lb://school-management
+            predicates:
+              - Path=/insurances/**
 
 
 management:

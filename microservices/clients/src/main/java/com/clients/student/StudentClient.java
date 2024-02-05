@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @FeignClient("SCHOOL-MANAGEMENT")
+@RequestMapping("/school")
 public interface StudentClient {
     @GetMapping("/getStudentById/{studentId}")
     StudentDto getStudentById(@PathVariable("studentId") Long studentId);

@@ -8,6 +8,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/school")
 public class CourseController {
 
     private final CourseService courseService;
