@@ -3,14 +3,15 @@ server:
 spring:
   application:
     name: api-gateway
-    cloud:
-      gateway:
-        routes:
-          - id: insurance
-            uri: lb://school-management
-            predicates:
-              - Path=/insurances/**
-
+  cloud:
+    gateway:
+      routes:
+        - id: schoolId
+          uri: lb://school-management
+          predicates:
+          - Path=/school/getStudents
+          filters:
+          - SetPath=/school/getAllStudents
 
 management:
   tracing:
