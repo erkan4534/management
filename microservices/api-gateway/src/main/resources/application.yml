@@ -1,8 +1,13 @@
 server:
-  port: 8083
+  port: 8084
 spring:
   application:
     name: api-gateway
+    cloud:
+      gateway:
+        routes:
+
+
 
 management:
   tracing:
