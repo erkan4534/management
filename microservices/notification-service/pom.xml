@@ -52,6 +52,7 @@
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
+        <!--zipkin start-->
         <dependency>
             <groupId>io.micrometer</groupId>
             <artifactId>micrometer-observation</artifactId>
@@ -72,6 +73,7 @@
             <groupId>io.github.openfeign</groupId>
             <artifactId>feign-micrometer</artifactId>
         </dependency>
+        <!--zipkin end-->
     </dependencies>
     <dependencyManagement>
         <dependencies>
