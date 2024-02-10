@@ -26,6 +26,7 @@
         <module>payment-service</module>
         <module>clients</module>
         <module>api-gateway</module>
+        <module>rabbitmq</module>
     </modules>
 
 </project>
