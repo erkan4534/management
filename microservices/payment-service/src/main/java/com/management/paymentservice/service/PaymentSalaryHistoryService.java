@@ -1,4 +1,4 @@
-package com.management.rabbitmq.paymentservice.service;
+package com.management.paymentservice.service;
 
 public interface PaymentSalaryHistoryService {
   void beforeAnyOperation(Object object);

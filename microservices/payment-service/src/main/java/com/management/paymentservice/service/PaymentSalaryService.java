@@ -1,4 +1,4 @@
-package com.management.rabbitmq.paymentservice.service;
+package com.management.paymentservice.service;
 
 import com.clients.payment.dto.PaymentSalaryDto;
 import java.util.List;

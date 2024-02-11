@@ -1,6 +1,6 @@
-package com.management.rabbitmq.paymentservice.model;
+package com.management.paymentservice.model;
 
-import com.management.rabbitmq.paymentservice.service.impl.PaymentSalaryHistoryServiceImpl;
+import com.management.paymentservice.service.impl.PaymentSalaryHistoryServiceImpl;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

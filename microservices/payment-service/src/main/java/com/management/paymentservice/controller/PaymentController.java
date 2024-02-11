@@ -1,6 +1,6 @@
-package com.management.rabbitmq.paymentservice.controller;
+package com.management.paymentservice.controller;
 
-import com.management.rabbitmq.paymentservice.service.PaymentSalaryService;
+import com.management.paymentservice.service.PaymentSalaryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import com.clients.payment.dto.PaymentSalaryDto;

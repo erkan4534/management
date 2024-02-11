@@ -1,4 +1,4 @@
-package com.management.rabbitmq.paymentservice.configuration;
+package com.management.paymentservice.configuration;
 
 import feign.Capability;
 import feign.micrometer.MicrometerCapability;

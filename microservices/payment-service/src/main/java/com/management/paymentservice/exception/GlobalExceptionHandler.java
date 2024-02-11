@@ -1,4 +1,4 @@
-package com.management.rabbitmq.paymentservice.exception;
+package com.management.paymentservice.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

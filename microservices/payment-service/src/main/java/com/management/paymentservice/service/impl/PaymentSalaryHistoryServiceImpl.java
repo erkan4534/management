@@ -1,9 +1,9 @@
-package com.management.rabbitmq.paymentservice.service.impl;
+package com.management.paymentservice.service.impl;
 
-import com.management.rabbitmq.paymentservice.model.PaymentSalary;
-import com.management.rabbitmq.paymentservice.model.PaymentSalaryHistory;
-import com.management.rabbitmq.paymentservice.repository.PaymentSalaryHistoryRepository;
-import com.management.rabbitmq.paymentservice.service.PaymentSalaryHistoryService;
+import com.management.paymentservice.model.PaymentSalary;
+import com.management.paymentservice.model.PaymentSalaryHistory;
+import com.management.paymentservice.repository.PaymentSalaryHistoryRepository;
+import com.management.paymentservice.service.PaymentSalaryHistoryService;
 import jakarta.persistence.PreRemove;
 import lombok.NoArgsConstructor;
 import org.modelmapper.ModelMapper;

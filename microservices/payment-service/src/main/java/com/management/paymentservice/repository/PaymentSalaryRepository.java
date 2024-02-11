@@ -1,6 +1,6 @@
-package com.management.rabbitmq.paymentservice.repository;
+package com.management.paymentservice.repository;
 
-import com.management.rabbitmq.paymentservice.model.PaymentSalary;
+import com.management.paymentservice.model.PaymentSalary;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

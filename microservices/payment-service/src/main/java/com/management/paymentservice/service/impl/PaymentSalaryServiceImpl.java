@@ -1,12 +1,12 @@
-package com.management.rabbitmq.paymentservice.service.impl;
+package com.management.paymentservice.service.impl;
 
 import com.clients.instructor.InstructorClient;
 import com.clients.instructor.dto.InstructorDto;
 import com.clients.payment.dto.PaymentSalaryDto;
-import com.management.rabbitmq.paymentservice.exception.RecordNotFoundException;
-import com.management.rabbitmq.paymentservice.model.PaymentSalary;
-import com.management.rabbitmq.paymentservice.repository.PaymentSalaryRepository;
-import com.management.rabbitmq.paymentservice.service.PaymentSalaryService;
+import com.management.paymentservice.exception.RecordNotFoundException;
+import com.management.paymentservice.model.PaymentSalary;
+import com.management.paymentservice.repository.PaymentSalaryRepository;
+import com.management.paymentservice.service.PaymentSalaryService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;

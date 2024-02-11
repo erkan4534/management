@@ -1,9 +1,9 @@
-package com.management.rabbitmq.paymentservice.initializer;
+package com.management.paymentservice.initializer;
 
 import com.clients.instructor.InstructorClient;
 import com.clients.instructor.dto.InstructorDto;
-import com.management.rabbitmq.paymentservice.model.PaymentSalary;
-import com.management.rabbitmq.paymentservice.repository.PaymentSalaryRepository;
+import com.management.paymentservice.repository.PaymentSalaryRepository;
+import com.management.paymentservice.model.PaymentSalary;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
