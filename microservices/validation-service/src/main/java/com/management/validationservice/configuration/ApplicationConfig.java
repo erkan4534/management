@@ -1,4 +1,4 @@
-package com.management.rabbitmq.validationservice.configuration;
+package com.management.validationservice.configuration;
 
 import feign.Capability;
 import feign.micrometer.MicrometerCapability;
