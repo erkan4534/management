@@ -2,7 +2,6 @@ package com.management.schoolservice.initializer;
 
 import com.management.schoolservice.model.*;
 import com.management.schoolservice.repository.InstructorRepository;
-import com.school.management.model.*;
 import com.management.schoolservice.model.enums.Gender;
 import com.management.schoolservice.repository.CourseRepository;
 import com.management.schoolservice.repository.StudentRepository;
