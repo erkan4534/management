@@ -6,7 +6,6 @@ import com.management.schoolservice.model.PermanentInstructor;
 import com.management.schoolservice.model.VisitingResearcher;
 import com.management.schoolservice.repository.InstructorRepository;
 import com.management.schoolservice.service.InstructorService;
-import com.school.management.model.*;
 import com.management.schoolservice.exception.RecordNotFoundException;
 import com.management.schoolservice.repository.CourseRepository;
 import lombok.RequiredArgsConstructor;

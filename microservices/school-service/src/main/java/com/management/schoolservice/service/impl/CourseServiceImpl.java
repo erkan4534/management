@@ -7,7 +7,6 @@ import com.management.schoolservice.model.Instructor;
 import com.management.schoolservice.repository.CourseToStudentRepository;
 import com.management.schoolservice.repository.InstructorRepository;
 import com.management.schoolservice.service.CourseService;
-import com.school.management.model.*;
 import com.management.schoolservice.repository.CourseRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
