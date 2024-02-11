@@ -1,4 +1,4 @@
-package com.management.rabbitmq.notification.configuration;
+package com.management.notification.configuration;
 
 import lombok.Getter;
 import org.springframework.amqp.core.Binding;

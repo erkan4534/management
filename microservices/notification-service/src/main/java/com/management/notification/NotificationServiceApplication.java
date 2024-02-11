@@ -1,7 +1,7 @@
-package com.management.rabbitmq.notification;
+package com.management.notification;
 
 import com.management.rabbitmq.RabbitMQMessageProducer;
-import com.management.rabbitmq.notification.configuration.NotificationConfig;
+import com.management.notification.configuration.NotificationConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

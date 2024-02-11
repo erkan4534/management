@@ -1,4 +1,4 @@
-package com.management.rabbitmq.notification.configuration;
+package com.management.notification.configuration;
 
 import feign.Capability;
 import feign.micrometer.MicrometerCapability;

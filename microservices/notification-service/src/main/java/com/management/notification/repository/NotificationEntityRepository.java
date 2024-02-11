@@ -1,6 +1,6 @@
-package com.management.rabbitmq.notification.repository;
+package com.management.notification.repository;
 
-import com.management.rabbitmq.notification.model.Notification;
+import com.management.notification.model.Notification;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

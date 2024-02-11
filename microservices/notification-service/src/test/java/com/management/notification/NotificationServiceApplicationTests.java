@@ -1,4 +1,4 @@
-package com.management.rabbitmq.notification;
+package com.management.notification;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package com.management.rabbitmq.notification.model;
+package com.management.notification.model;
 
 import jakarta.persistence.*;
 import lombok.*;

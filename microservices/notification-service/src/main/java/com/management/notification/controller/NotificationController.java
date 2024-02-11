@@ -1,7 +1,7 @@
-package com.management.rabbitmq.notification.controller;
+package com.management.notification.controller;
 
 import com.clients.notification.dto.NotificationDto;
-import com.management.rabbitmq.notification.service.NotificationService;
+import com.management.notification.service.NotificationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

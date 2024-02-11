@@ -1,8 +1,8 @@
-package com.management.rabbitmq.notification.service;
+package com.management.notification.service;
 
 import com.clients.notification.dto.NotificationDto;
-import com.management.rabbitmq.notification.model.Notification;
-import com.management.rabbitmq.notification.repository.NotificationEntityRepository;
+import com.management.notification.model.Notification;
+import com.management.notification.repository.NotificationEntityRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
