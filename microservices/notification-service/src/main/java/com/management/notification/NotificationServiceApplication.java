@@ -11,7 +11,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @EnableFeignClients(basePackages = "com.clients.notification")
 @EnableDiscoveryClient
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {
+        "com.management.notification",
+        "com.management.rabbitmq"
+})
 public class NotificationServiceApplication implements CommandLineRunner {
     public static void main(String[] args) {
         SpringApplication.run(NotificationServiceApplication.class, args);
@@ -25,6 +28,6 @@ public class NotificationServiceApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-
+        producer.publish("Test Test",config.getNotificationExchange(),config.getNotificationRoutingKey());
     }
 }
