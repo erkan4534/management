@@ -1,5 +1,7 @@
 package com.management.notification;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.management.notification.model.Notification;
 import com.management.rabbitmq.RabbitMQMessageProducer;
 import com.management.notification.configuration.NotificationConfig;
@@ -32,11 +34,17 @@ public class NotificationServiceApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         //producer.publish("Test Test",config.getNotificationExchange(),config.getNotificationRoutingKey());
-        producer.publish(Notification.builder()
-                        .toCustomerPhone("1111111")
-                        .sender("aaa")
-                        .sentAt(LocalDateTime.now())
-                        .build()
-                ,config.getNotificationExchange(),config.getNotificationRoutingKey());
+
+        ObjectMapper om = new ObjectMapper();
+        om.registerModule(new JavaTimeModule());
+
+        // convert object to json
+        String result = om.writeValueAsString(Notification.builder()
+                .toCustomerPhone("1111111")
+                .sender("aaa")
+                .sentAt(LocalDateTime.now())
+                .build());
+
+        producer.publish(result,config.getNotificationExchange(),config.getNotificationRoutingKey());
     }
 }
