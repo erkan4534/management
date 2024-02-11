@@ -8,7 +8,6 @@ import com.management.schoolservice.model.Student;
 import com.management.schoolservice.repository.CourseToStudentRepository;
 import com.management.schoolservice.repository.StudentRepository;
 import com.management.schoolservice.service.StudentService;
-import com.school.management.model.*;
 import com.management.schoolservice.exception.RecordNotFoundException;
 import com.management.schoolservice.repository.CourseRepository;
 import lombok.RequiredArgsConstructor;
